@@ -4,8 +4,6 @@
 # PROJECT OVERVIEW
 TickerTensor is a small, production-friendly Node.js tool that ingests multiple equity CSV files and converts them into a clean, chronologically aligned N×M matrix of closing prices—perfect for downstream quant research, factor modeling, and backtests. It focuses on robust ingestion (delimiter/header/date quirks), deterministic alignment (intersected trading dates), and high signal-to-noise output (summary + preview, optional artifacts).
 
-This project was built with real-world CSV messiness in mind—different vendors, different headers, Close/Last vs Adj Close, commas/semicolons/tabs, $1,234.56, and MM/DD/YYYY. Tests ensure the matrix is rectangular, dates are ascending, and values are finite and positive.
-
 # KEY FEATURES 🔑
 **Robust CSV ingestion.**
 - Handles comma/semicolon/tab delimiters, header aliases (Close/Last, Adj Close, etc.), $ and thousands separators, and date normalization to ISO (YYYY-MM-DD).
