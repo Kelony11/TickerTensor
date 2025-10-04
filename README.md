@@ -15,11 +15,10 @@ This project was built with real-world CSV messiness in mind—different vendors
 - Uses per-ticker Map(date → close) for O(1) lookups while building the matrix.
 **Readable CLI output**
 - Prints a concise recap (start/end dates, companies, points per series) and a formatted table preview (first/last rows).
-**Diagnostics utilities**
-- A helper script prints first/last dates per ticker and the global overlap window, great for debugging real datasets.
 
 
 # TECHNICAL STACK 🧱
+
 - Language/Runtime: JavaScript (ESM), Node.js
 
 - Core Modules: fs, path, url
@@ -31,6 +30,7 @@ This project was built with real-world CSV messiness in mind—different vendors
 - CI (optional): GitHub Actions
 
 # ROBUSTNESS & EDGE CASES
+
 - Delimiters: comma / semicolon / tab
 
 - Headers: Close, Adj Close, Close/Last, Adjusted Close, Last
@@ -41,6 +41,7 @@ This project was built with real-world CSV messiness in mind—different vendors
 
 
 # TESTING STRATEGY 🧪
+
 **Run with npm test.**
 
 **Highlights (Jasmine):**
