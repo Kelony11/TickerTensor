@@ -16,7 +16,7 @@ This project was built with real-world CSV messiness in mind—different vendors
 **Readable CLI output**
 - Prints a concise recap (start/end dates, companies, points per series) and a formatted table preview (first/last rows).
 **Diagnostics utilities**
-- A helper script prints first/last dates per ticker and the global overlap window—great for debugging real datasets.
+- A helper script prints first/last dates per ticker and the global overlap window, great for debugging real datasets.
 
 
 # TECHNICAL STACK 🧱
