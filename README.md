@@ -1,8 +1,9 @@
 # TickerTensor
-**Multi-Ticker CSV Ingestion → Aligned N×M Price Matrix**
+**Multi-Ticker CSV Ingestion → Aligned N×M Price Matrix + Moving-Window Stats**
 
 # PROJECT OVERVIEW
-TickerTensor is a small, production-friendly Node.js tool that ingests multiple equity CSV files and converts them into a clean, chronologically aligned N×M matrix of closing prices—perfect for downstream quant research, factor modeling, and backtests. It focuses on robust ingestion (delimiter/header/date quirks), deterministic alignment (intersected trading dates), and high signal-to-noise output (summary + preview, optional artifacts).
+TickerTensor is a small, production-friendly Node.js tool that ingests multiple equity CSVs and converts them into a clean, chronologically aligned N×M matrix of closing prices—great for quant research and backtests.
+It includes a functional, loop-free moving-window statistics (mean, standard deviation, peak/trough counts) over overlapping and non-overlapping windows and prints concise summaries.
 
 # KEY FEATURES 🔑
 **Robust CSV ingestion.**
@@ -11,6 +12,11 @@ TickerTensor is a small, production-friendly Node.js tool that ingests multiple 
 - Intersects trading dates across all tickers to produce a rectangular N×M matrix (rows = dates, columns = tickers).
 **Fast assembly (O(N×M))**
 - Uses per-ticker Map(date → close) for O(1) lookups while building the matrix.
+**Moving-window statistics**
+- Functional JS (only map, reduce, filter, slice, Array.from; no for/while).
+- Computes mean, standard deviation (population by default; sample optional), and strict local peaks/troughs (endpoints ignored).
+- Overlapping windows (step = 1 or 5) and non-overlapping (step = window size).
+- Window sizes: 50, 200, 2000 (or custom via CLI for small samples).
 **Readable CLI output**
 - Prints a concise recap (start/end dates, companies, points per series) and a formatted table preview (first/last rows).
 
