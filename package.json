@@ -1,12 +1,16 @@
 {
-  "name": "homework1",
+  "name": "ticker-tensor-2",
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js data/real",
+    "hw1": "node src/index.js data/real",
+    "hw2:step1": "node src/index2.js ./data/stocks.csv 1 50,200,2000",
+    "hw2:step5": "node src/index2.js ./data/stocks.csv 5 50,200,2000",
+    "hw2:small": "node src/index2.js ./data/stocks.csv 1 3,5,10",
     "test": "jasmine --config=spec/support/jasmine.mjs",
     "check:ranges": "node src/check_ranges.js data/real"
+
   },
   "keywords": [],
   "author": "",
