@@ -30,8 +30,7 @@ It includes a functional, loop-free moving-window statistics (mean, standard dev
 - Testing: Jasmine 5
 
 - Tooling: ESLint (flat config), VS Code, Git/GitHub
-
-- CI (optional): GitHub Actions
+  
 
 # ROBUSTNESS & EDGE CASES
 
